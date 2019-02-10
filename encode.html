@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Enigmagram</title>
+      <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+      <link rel="stylesheet" type="text/css" href="css.css">
+      <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+   </head>
+   <body>
+      <div id="header">
+         <div id="title">Enigmagram</div>
+         <div id="subtitle">A simple message-encoding tool.</div>
+      </div>
+      <div class="slidecontainer">
+         <input type="range" min="0" max="25" value="5" id="slider">
+      </div>
+      <p>
+         <span id="position"></span>
+      </p>
+      <script type="text/javascript">
+         var slider = document.getElementById("slider");
+         var output = document.getElementById("position");
+         output.innerHTML = slider.value; 
+         slider.oninput = function() {
+         output.innerHTML = this.value;
+         }
+      </script>
+      <input type="text" id="input_message" placeholder="Enter the message you'd like to encrypt."></input><br />
+      <center>
+         <div id="info">
+            <div id="info-title">How does it work?</div>
+            <div id="instructions">
+               <table>
+                  <tr>
+                     <td>1. Do this</td>
+                  </tr>
+                  <tr>
+                     <td>2. Then this</td>
+                  </tr>
+                  <tr>
+                     <td>3. And finally, do this</td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+      </center>
+ 
+      <script type="text/javascript"> 
+         Initial = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+      </script>
+      <div id="credits">
+         <p>Made by <a id="link" href="https://www.twitter.com/toalaah">Samuel Kunst</a> | <a id="link" href="https://github.com/Toalaah/Enigmagram">Github Source</a></p>
+      </div>
+   </body>
+</html>
